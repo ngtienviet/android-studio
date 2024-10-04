@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="30dp"
+    android:paddingRight="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
+        android:text="quan ly hoc sinh trong lop"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="17dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="11dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edten"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
+        android:background="#F3FAE0"
+        android:ems="10"
+        android:hint="Nguyen thị Van"
+        android:inputType="text"
+        android:paddingLeft="12dp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/radioNamNu"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edten">
+
+        <RadioButton
+            android:id="@+id/ranam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="nam" />
+
+        <RadioButton
+            android:id="@+id/ranu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nữ" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="21dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edten" />
+
+    <Button
+        android:id="@+id/btxoa"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:background="#EF9A9A"
+        android:text="xoa"
+        app:layout_constraintBottom_toBottomOf="@+id/btthem"
+        app:layout_constraintStart_toEndOf="@+id/btthem"
+        app:layout_constraintTop_toTopOf="@+id/btthem" />
+
+    <Button
+        android:id="@+id/btthem"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="#A5D6A7"
+        android:text="Them"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btsua"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="11dp"
+        android:background="#90CAF9"
+        android:text="sua"
+        app:layout_constraintBottom_toBottomOf="@+id/btxoa"
+        app:layout_constraintStart_toEndOf="@+id/btxoa"
+        app:layout_constraintTop_toTopOf="@+id/btxoa" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btthem" />
+
+    <Button
+        android:id="@+id/bttim"
+        android:layout_width="69dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/tim"
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/btsua"
+        app:layout_constraintTop_toTopOf="@+id/btsua" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
